@@ -1,4 +1,4 @@
-## Programozási nyelv C++
+## C++
 
 C++ referencia: [CppReference](https://en.cppreference.com/w/cpp)
 
