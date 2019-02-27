@@ -2,8 +2,6 @@
 
 Az elkészült feladatokat a `rekanikolett@gmail.com` cimre várom, ideális esetben `[TTK C++]` kezdetű tárggyal.
 
-Az eddig gyűjtött pontjaitokat megnézhetitek itt: [ponttáblázat](https://goo.gl/4ngAQp).
-
 ## 0. Mario piramis
 
 **Beadási határidő**: február 27.
