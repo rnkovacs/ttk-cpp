@@ -8,8 +8,7 @@
  - [Koenig, Moo: Accelerated C++](https://www.amazon.com/Accelerated-C-Practical-Programming-Example/dp/020170353X)
 
 Itt megtaláljátok:
- - az eddigi órák vázlatos [tematikáit](tematika.md),
- - a beadandók [feladatkiírásait](beadandok.md), és
- - a [ponttáblázatot](https://goo.gl/4ngAQp).
+ - az eddigi órák vázlatos [tematikáit](tematika.md), és
+ - a beadandók [feladatkiírásait](beadandok.md).
  
 Elérhető ezen túl egy [segédlet](programozasi-kornyezet.md) a programozási környezet felállításához.
