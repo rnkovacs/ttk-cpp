@@ -8,7 +8,7 @@ int main() {
   std::cin >> vissza;
 
   if (vissza < 0 || vissza % 5 != 0) {
-    std::cerr << "Csak 5-tel oszthato pozitiv szam lehet." << std::endl;
+    std::cout << "Csak 5-tel oszthato pozitiv szam lehet." << std::endl;
     return 1;
   }
 
