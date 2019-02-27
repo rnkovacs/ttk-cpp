@@ -20,3 +20,58 @@ Kérdezzük meg a felhasználótól, hogy fél- vagy egész piramist szeretne-e 
  #### ####
 ##### #####
 ```
+
+## 1. Hitelkártya
+
+**Beadási határidő**: március 13.
+
+Irjunk egy programot, ami eldönti a felhasználótól beolvasott kártyaszámról, hogy
+valódi-e (5 pont). Használjuk ehhez a [Luhn-algoritmust](https://hu.wikipedia.org/wiki/Luhn-formula)!
+
+Legyen szó első körben MasterCard kártyákról. Ezekről azt tudjuk,
+hogy 16 számjegyből állnak, és az első két számjegyük az alábbi lehetőségek közül
+kerül ki: 51, 52, 53, 53, 55. A program viselkedése legyen a következő:
+
+```
+$ ./mastercard
+Card number: 378
+Invalid
+
+$ ./mastercard
+Card number: 4716904945120806
+Invalid
+
+$ ./mastercard
+Card number: 5531762164721732
+Valid
+
+$ ./mastercard
+Card number: 5531762164721733
+Invalid
+```
+
+(+ 2 pont) Ismerjünk fel más kártyatipusokat is! A Visa kártyák számai 4-essel
+kezdődnek, és vagy 13, vagy 16 számjegyből állnak. Az American Express kártyák
+15 számjegyből állnak, és 34-re vagy 37-re kezdődnek.
+
+```
+$ ./credit
+Card number: 4716904945120806
+Visa
+
+$ ./credit
+Card number: 5531762164721732
+MasterCard
+
+$ ./credit
+Card number: 370214777555219
+American Express
+
+$ ./credit
+Card number: 4716904945120807
+Invalid
+
+$ ./credit
+Card number: 4716904
+Invalid
+```
