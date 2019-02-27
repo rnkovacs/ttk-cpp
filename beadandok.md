@@ -26,28 +26,29 @@ Kérdezzük meg a felhasználótól, hogy fél- vagy egész piramist szeretne-e 
 **Beadási határidő**: március 13.
 
 Irjunk egy programot, ami eldönti a felhasználótól beolvasott kártyaszámról, hogy
-valódi-e (5 pont). Használjuk ehhez a [Luhn-algoritmust](https://hu.wikipedia.org/wiki/Luhn-formula)!
+valódi-e (5 pont). A beolvasott szám tárolására használjunk `long long` tipust.
+A validálást a [Luhn-algoritmussal](https://hu.wikipedia.org/wiki/Luhn-formula) végezzük!
 
 Legyen szó első körben MasterCard kártyákról. Ezekről azt tudjuk,
 hogy 16 számjegyből állnak, és az első két számjegyük az alábbi lehetőségek közül
 kerül ki: 51, 52, 53, 53, 55. A program viselkedése legyen a következő:
 
 ```
-$ ./mastercard
-Card number: 378
+$ ./credit
+Card number: -378
 Invalid
 
-$ ./mastercard
+$ ./credit
+Card number: foo
+Invalid
+
+$ ./credit
 Card number: 4716904945120806
 Invalid
 
-$ ./mastercard
+$ ./credit
 Card number: 5531762164721732
 Valid
-
-$ ./mastercard
-Card number: 5531762164721733
-Invalid
 ```
 
 (+ 2 pont) Ismerjünk fel más kártyatipusokat is! A Visa kártyák számai 4-essel
@@ -75,3 +76,4 @@ $ ./credit
 Card number: 4716904
 Invalid
 ```
+Teszteléshez valid hitelkártya-számokat [itt](http://www.getcreditcardnumbers.com/how-to-get-a-master-card-credit-card) találtok.
