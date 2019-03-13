@@ -10,7 +10,7 @@
 #### 2. gyakorlat
 
  - `std::vector` létrehozása beégetett és felhasználótól kapott elemekkel.
- - `std::vector` végigjárása hagyományos `for` ciklissal és *range-based* `for` ciklussal.
+ - `std::vector` végigjárása hagyományos `for` ciklussal és range-based `for` ciklussal.
  - `while` ciklus.
 
 
