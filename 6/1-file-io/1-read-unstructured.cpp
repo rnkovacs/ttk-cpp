@@ -3,7 +3,9 @@
 #include <vector>
 
 int main() {
-  std::ifstream in("zup.txt"); // open() is called automatically
+  // Lifetime of the file handler is bound to the ifstream object 'in'.
+  // Calls open() automatically.
+  std::ifstream in("data/unstructured.data");
   
   if (!in) {
     std::cout << "Cannot open file." << std::endl;
@@ -21,4 +23,7 @@ int main() {
   std::cout << std::endl;
 
   return 0;
+
+  // File handler is destroyed automatically when 'in' goes out of scope.
+  // Calls close() automatically.
 }
