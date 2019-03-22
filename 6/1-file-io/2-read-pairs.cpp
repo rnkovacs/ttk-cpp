@@ -11,7 +11,8 @@ int main() {
     return 1;
   }
 
-  double x, y, dot_product;
+  double x, y;
+  double dot_product = 0.; // Needs to be initialized!
   // We know that the input file contains pairs.
   // We interpret them as elements of two vectors.
   while (in >> x >> y) {
