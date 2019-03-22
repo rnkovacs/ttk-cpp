@@ -75,3 +75,42 @@ Card number: 4716904
 Invalid
 ```
 Teszteléshez valid hitelkártya-számokat [itt](http://www.getcreditcardnumbers.com/how-to-get-a-master-card-credit-card) találtok.
+
+
+## 2. Mátrixszorzás
+
+**Beadási határidő**: április 3.
+
+Irjunk egy mátrixszorzó programot! (8 pont) A bemenet két szöveges fájl, ami a várakozásaink szerint egy-egy mátrixot tartalmaz. A fájlok neveit a felhasználó parancssori argumentumként adja meg, ahogyan a kimeneti fájl kivánt nevét is. Utóbbit mi hozzuk létre, hogy beleirjuk a mátrixszorzás eredményét.
+
+Ha kevesebb, mint két parancssori argumentumot kapunk a felhasználótól (a program nevén kivül), vagy többet, mint hármat, akkor irjunk ki egy segitő szöveget, pl.
+
+```
+$ ./matmul 
+Matrix multiplier program.
+
+Usage: ./matmul [IN1] [IN2] [OUT]
+IN1 : input matrix file 1,
+IN2 : input matrix file 2,
+OUT : output file to store the result.
+```
+
+A `Usage` szó után mindig a futtatható állomány neve iródjon ki (attól függetlenül, milyen névre kereszteli, aki forditja, pl. Windowson lehet `enyem.exe` is)! Ha csak két parancssori bemenetet kapunk a program neve után (`IN1` és `IN2`), akkor egy általunk választott alapértelmezett nevű fájlba rakjuk el az eredményt, és erről tájékoztassuk a felhasználót. Pl.
+
+```
+$ ./matmul m1.data m2.data
+[Note] No output path specified, using default output location. 
+[Note] Results will be saved to './product.data'.
+...
+```
+
+Ne feledjük, hogy a bemeneti fájlokból csak akkor tudunk olvasni, ha sikerült őket megnyitni. Ez igaz arra a fájlra is, amibe irni fogunk. 
+
+A bemeneti mátrixok olvasásakor (ill. utána) ellenőrizzük a méreteiket! Egy mátrixnak minden sora ugyanolyan hosszú, valamint két mátrixot csak akkor tudunk összeszorozni, ha az első mátrix oszlopainak a száma megegyezik a második mátrix sorainak a számával. Ha ezek közül valamelyik nem teljesül, akkor tájékoztassuk a felhasználót a problémáról, és lépjünk ki a programból. Pl.
+
+```
+$ ./matmul m1.data m2.data out.data
+[Error] Matrix in 'm1.data' is ill-formed.
+```
+
+Figyeljünk rá, hogy a programkódunk szép moduláris legyen, pl. a mátrixszorzás logikája legyen külön függvényben. Ezen a ponton még feltételezhetjük, hogy a mátrixaink nem lesznek túl nagyok. Az alapfeladat helyes megoldásán felül kreativitásért és extra hozzáadott értékért pluszpontok szerezhetők.
