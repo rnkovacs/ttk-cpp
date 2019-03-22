@@ -2,8 +2,6 @@
 #include <fstream>
 #include <vector>
 
-using dmatrix = std::vector<std::vector<double>>;
-
 int main() {
   // Lifetime of the file handler is bound to the ofstream object 'out'.
   // Calls open() automatically.
@@ -14,11 +12,11 @@ int main() {
     return 1;
   }
 
-  dmatrix m = { {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9} };
+  std::vector<std::vector<double>> m = { {1, 2, 3},
+                                         {4, 5, 6},
+                                         {7, 8, 9} };
 
-  for (auto row : m) {
+  for (std::vector<double> row : m) {
     for (double col : row) {
       out << col << ' ';
     }
