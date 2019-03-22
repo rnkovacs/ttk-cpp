@@ -110,7 +110,7 @@ A bemeneti mátrixok olvasásakor (ill. utána) ellenőrizzük a méreteiket! Eg
 
 ```
 $ ./matmul m1.data m2.data out.data
-[Error] Matrix in 'm1.data' is ill-formed.
+[Error] Matrix in 'm1.data' is ill-formed (different row lengths).
 ```
 
 Figyeljünk rá, hogy a programkódunk szép moduláris legyen, pl. a mátrixszorzás logikája legyen külön függvényben. Ezen a ponton még feltételezhetjük, hogy a mátrixaink nem lesznek túl nagyok. Az alapfeladat helyes megoldásán felül kreativitásért és extra hozzáadott értékért pluszpontok szerezhetők.
