@@ -79,7 +79,7 @@ Teszteléshez valid hitelkártya-számokat [itt](http://www.getcreditcardnumbers
 
 ## 2. Mátrixszorzás
 
-**Beadási határidő**: április 3.
+**Beadási határidő**: április 10.
 
 Irjunk egy mátrixszorzó programot! (8 pont) A bemenet két szöveges fájl, ami a várakozásaink szerint egy-egy mátrixot tartalmaz. A fájlok neveit a felhasználó parancssori argumentumként adja meg, ahogyan a kimeneti fájl kivánt nevét is. Utóbbit mi hozzuk létre, hogy beleirjuk a mátrixszorzás eredményét.
 
