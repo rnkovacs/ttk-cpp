@@ -32,7 +32,7 @@ char *reverse_const_string_pointers(char *dest, const char *src) {
   // The disadvantage is that begin and end are now accessible after the loop.
   char *begin = dest; // The star is part of the pointer declaration.
   char *end = dest + strlen(dest) - 1;
-  for ( ; begin != end; ++begin, --end) {
+  for ( ; begin < end; ++begin, --end) {
     std::swap(*begin, *end); // These stars are dereference operators.
   }
 
