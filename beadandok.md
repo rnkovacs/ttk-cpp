@@ -114,3 +114,31 @@ $ ./matmul m1.data m2.data out.data
 ```
 
 Figyeljünk rá, hogy a programkódunk szép moduláris legyen, pl. a mátrixszorzás logikája legyen külön függvényben. Ezen a ponton még feltételezhetjük, hogy a mátrixaink nem lesznek túl nagyok. Az alapfeladat helyes megoldásán felül kreativitásért és extra hozzáadott értékért pluszpontok szerezhetők.
+
+
+## Rendezések
+
+Implementáljuk a következő 3 rendezést C stilusú számtömbökre:
+
+ - Buborékrendezés (Bubble sort) [[Wiki]](https://en.wikipedia.org/wiki/Bubble_sort) [[Videó]](https://www.youtube.com/watch?v=RT-hUXUWQ2I) (3 pont)
+ - Kiválasztásos rendezés (Selection sort) [[Wiki]](https://en.wikipedia.org/wiki/Selection_sort) [[Videó]](https://www.youtube.com/watch?v=3hH8kTHFw2A) (3 pont)
+ - Beszúrásos rendezés (Insertion sort) [[Wiki]](https://en.wikipedia.org/wiki/Insertion_sort) [[Videó]](https://www.youtube.com/watch?v=O0VbBkUvriI&t=212s) (3 pont)
+
+A rendezést végző függvény szignatúrája lehet pl:
+
+```
+// Performs XXX sort in place on the given array.
+// Arguments:
+//    arr : array to sort,
+//    len : length (size) of the array.
+void XXX_sort(int *arr, int len);
+```
+
+A függvényt hivjátok meg egy stacken létrehozott tömbön!
+Irjátok ki a tömb elemeit rendezés előtt és után. Hogy gyakoroljátok a kód szép 
+tagolását, definiálhattok egy függvényt, ami ezt akármilyen tömbre elvégzi, pl.
+
+```
+// Optional helper function to pretty-print the given array to stdout.
+void print_array(int *arr, int len);
+```
