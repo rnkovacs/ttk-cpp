@@ -134,6 +134,8 @@ A rendezést végző függvény szignatúrája lehet pl:
 void XXX_sort(int *arr, int len);
 ```
 
+Hasonló jellegű függvényeket órán is oldottunk, ezeket [itt](https://github.com/rnkovacs/ttk-cpp/blob/master/8/2-binary-search/1-search-array.cpp) találjátok meg.
+
 A függvényt hivjátok meg egy stacken létrehozott tömbön!
 Irjátok ki a tömb elemeit rendezés előtt és után. Hogy gyakoroljátok a kód szép 
 tagolását, definiálhattok egy függvényt, ami ezt akármilyen tömbre elvégzi, pl.
