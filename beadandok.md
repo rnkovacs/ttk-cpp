@@ -116,7 +116,7 @@ $ ./matmul m1.data m2.data out.data
 Figyeljünk rá, hogy a programkódunk szép moduláris legyen, pl. a mátrixszorzás logikája legyen külön függvényben. Ezen a ponton még feltételezhetjük, hogy a mátrixaink nem lesznek túl nagyok. Az alapfeladat helyes megoldásán felül kreativitásért és extra hozzáadott értékért pluszpontok szerezhetők.
 
 
-## Rendezések
+## 3. Rendezések
 
 Implementáljuk a következő 3 rendezést C stilusú számtömbökre:
 
