@@ -5,7 +5,6 @@
 
 class Date {
   friend class Product;
-
   int year, month, day;
 
 public:
@@ -20,7 +19,6 @@ public:
 
 class Product {
   friend class Webstore;
-
   std::string name;
   std::string code;
   int price;
@@ -49,8 +47,8 @@ bool sortCode(Product p1, Product p2) {
   return p1.get_code() < p2.get_code();
 }
 
-struct RemoveCode {
-  RemoveCode(std::string c): code(c) {}
+struct RemoveIfCode {
+  RemoveIfCode(std::string c): code(c) {}
   bool operator()(Product p) {
     return p.get_code() == code;
   }
@@ -58,8 +56,8 @@ private:
   std::string code;
 };
 
-struct IncomeAdder {
-  Income(int y, int m): year(y), month(m) {}
+struct AddToIncome {
+  AddToIncome(int y, int m): year(y), month(m) {}
   int operator()(int sum_so_far, Product p) {
     if (p.get_sold().get_year() == year &&
         p.get_sold().get_month() == month) {
@@ -73,6 +71,7 @@ private:
 
 class Webstore {
   std::vector<Product> lista;
+
 public:
   void list() {
     std::cout << "Product list:" << std::endl; 
@@ -110,11 +109,11 @@ public:
   }
   
   void remove(std::string code) {
-    auto i = std::remove_if(lista.begin(), lista.end(), RemoveCode(code));
+    auto i = std::remove_if(lista.begin(), lista.end(), RemoveIfCode(code));
     lista.erase(i, lista.end());
   }
   
   int income(int year, int month) {
-    return std::accumulate(lista.begin(), lista.end(), 0, IncomeAdder(year, month));
+    return std::accumulate(lista.begin(), lista.end(), 0, AddToIncome(year, month));
   }
 };
